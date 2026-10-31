@@ -100,7 +100,7 @@ services:
       # Required for Trigger.dev docker buildx/buildkit
       - /var/run/docker.sock:/var/run/docker.sock
 
- command: ["bash", "-c", "openclaw doctor --fix; exec bash /app/scripts/bootstrap.sh"]
+    command: ["bash", "-c", "openclaw doctor --fix; exec bash /app/scripts/bootstrap.sh"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:18789/"]
       interval: 30s
